@@ -65,7 +65,8 @@ function AccordionItem({ num, title, curOpen, onOpen, children }) {
   const isOpen = num === curOpen;
 
   function handleToggle() {
-    onOpen(isOpen ? num : null);
+    onOpen(isOpen ? null : num);
+    // console.log("Testing", num, curOpen);
   }
 
   return (
